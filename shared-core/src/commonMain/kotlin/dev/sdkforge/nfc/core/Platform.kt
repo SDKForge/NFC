@@ -1,4 +1,4 @@
-package dev.sdkforge.template.core
+package dev.sdkforge.nfc.core
 
 interface Platform {
     val name: String

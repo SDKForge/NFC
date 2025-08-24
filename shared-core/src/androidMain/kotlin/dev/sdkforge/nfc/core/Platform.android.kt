@@ -1,4 +1,4 @@
-package dev.sdkforge.template.core
+package dev.sdkforge.nfc.core
 
 actual val currentPlatform: Platform = object : Platform {
     override val name: String get() = "Android"

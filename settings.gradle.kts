@@ -33,7 +33,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SDKForgeTemplate"
+rootProject.name = "SDKForge-NFC"
 
 include(":app-android")
 include(":app-shared")
