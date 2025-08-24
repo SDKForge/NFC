@@ -1,4 +1,4 @@
-package dev.sdkforge.template
+package dev.sdkforge.nfc
 
 import dev.sdkforge.template.Library.VERSION
 
