@@ -1,0 +1,4 @@
+public final class dev/sdkforge/nfc/ui/LocalNFC_androidKt {
+	public static final fun getLocalNFC (Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/CompositionLocal;
+}
+
