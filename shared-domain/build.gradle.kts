@@ -9,6 +9,10 @@ plugins {
 }
 
 kotlin {
+    androidLibrary {
+        namespace = "dev.sdkforge.nfc.domain"
+    }
+
     sourceSets {
         commonMain {
             dependencies {
@@ -21,8 +25,4 @@ kotlin {
             }
         }
     }
-}
-
-android {
-    namespace = "dev.sdkforge.nfc.domain"
 }
