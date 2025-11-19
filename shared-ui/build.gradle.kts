@@ -11,6 +11,10 @@ plugins {
 }
 
 kotlin {
+    androidLibrary {
+        namespace = "dev.sdkforge.nfc.ui"
+    }
+
     sourceSets {
         commonMain {
             dependencies {
@@ -26,8 +30,4 @@ kotlin {
             }
         }
     }
-}
-
-android {
-    namespace = "dev.sdkforge.nfc.ui"
 }
