@@ -1,6 +1,6 @@
 package dev.sdkforge.nfc
 
-import dev.sdkforge.template.Library.VERSION
+import dev.sdkforge.nfc.Library.VERSION
 
 /**
  * Library metadata and version information.
