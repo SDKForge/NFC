@@ -22,6 +22,7 @@ actual class NativeMifareNFCTag(
     actual override val family: NFCMifareFamily
         get() = when {
             mifareUltralight != null -> NFCMifareFamily.ULTRALIGHT
+
             mifareClassic != null -> when (mifareClassic.type) {
                 MifareClassic.TYPE_PLUS -> NFCMifareFamily.PLUS
                 else -> NFCMifareFamily.UNKNOWN
