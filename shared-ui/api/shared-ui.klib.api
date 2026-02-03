@@ -1,0 +1,10 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <dev.sdkforge.nfc:shared-ui>
+final val dev.sdkforge.nfc.ui/LocalNFC // dev.sdkforge.nfc.ui/LocalNFC|{}LocalNFC[0]
+    final fun <get-LocalNFC>(androidx.compose.runtime/Composer?, kotlin/Int): androidx.compose.runtime/CompositionLocal<dev.sdkforge.nfc.domain/NFC> // dev.sdkforge.nfc.ui/LocalNFC.<get-LocalNFC>|<get-LocalNFC>(androidx.compose.runtime.Composer?;kotlin.Int){}[0]

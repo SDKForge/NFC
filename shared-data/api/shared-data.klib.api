@@ -1,0 +1,87 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <dev.sdkforge.nfc:shared-data>
+final class dev.sdkforge.nfc.data/NativeMifareNFCTag : dev.sdkforge.nfc.data/NativeNFCTag, dev.sdkforge.nfc.domain/MifareNFCTag { // dev.sdkforge.nfc.data/NativeMifareNFCTag|null[0]
+    constructor <init>(platform.CoreNFC/NFCMiFareTagProtocol) // dev.sdkforge.nfc.data/NativeMifareNFCTag.<init>|<init>(platform.CoreNFC.NFCMiFareTagProtocol){}[0]
+
+    final val family // dev.sdkforge.nfc.data/NativeMifareNFCTag.family|{}family[0]
+        final fun <get-family>(): dev.sdkforge.nfc.domain/NFCMifareFamily // dev.sdkforge.nfc.data/NativeMifareNFCTag.family.<get-family>|<get-family>(){}[0]
+    final val identifier // dev.sdkforge.nfc.data/NativeMifareNFCTag.identifier|{}identifier[0]
+        final fun <get-identifier>(): kotlin/ByteArray // dev.sdkforge.nfc.data/NativeMifareNFCTag.identifier.<get-identifier>|<get-identifier>(){}[0]
+
+    final fun send(kotlin/ByteArray, kotlin/Function1<kotlin/ByteArray, kotlin/Unit>) // dev.sdkforge.nfc.data/NativeMifareNFCTag.send|send(kotlin.ByteArray;kotlin.Function1<kotlin.ByteArray,kotlin.Unit>){}[0]
+}
+
+final class dev.sdkforge.nfc.data/NativeNDEFMessage : dev.sdkforge.nfc.domain/NDEFMessage { // dev.sdkforge.nfc.data/NativeNDEFMessage|null[0]
+    constructor <init>(platform.CoreNFC/NFCNDEFMessage) // dev.sdkforge.nfc.data/NativeNDEFMessage.<init>|<init>(platform.CoreNFC.NFCNDEFMessage){}[0]
+
+    final val length // dev.sdkforge.nfc.data/NativeNDEFMessage.length|{}length[0]
+        final fun <get-length>(): kotlin/Long // dev.sdkforge.nfc.data/NativeNDEFMessage.length.<get-length>|<get-length>(){}[0]
+    final val records // dev.sdkforge.nfc.data/NativeNDEFMessage.records|{}records[0]
+        final fun <get-records>(): kotlin.collections/List<dev.sdkforge.nfc.domain/NDEFRecord> // dev.sdkforge.nfc.data/NativeNDEFMessage.records.<get-records>|<get-records>(){}[0]
+}
+
+final class dev.sdkforge.nfc.data/NativeNDEFMessageTag : dev.sdkforge.nfc.data/NativeNDEFTag { // dev.sdkforge.nfc.data/NativeNDEFMessageTag|null[0]
+    constructor <init>(dev.sdkforge.nfc.domain/NDEFMessage) // dev.sdkforge.nfc.data/NativeNDEFMessageTag.<init>|<init>(dev.sdkforge.nfc.domain.NDEFMessage){}[0]
+
+    final fun copy(dev.sdkforge.nfc.domain/NDEFMessage = ...): dev.sdkforge.nfc.data/NativeNDEFMessageTag // dev.sdkforge.nfc.data/NativeNDEFMessageTag.copy|copy(dev.sdkforge.nfc.domain.NDEFMessage){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sdkforge.nfc.data/NativeNDEFMessageTag.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sdkforge.nfc.data/NativeNDEFMessageTag.hashCode|hashCode(){}[0]
+    final fun readMessage(kotlin/Function1<dev.sdkforge.nfc.domain/NDEFMessage?, kotlin/Unit>) // dev.sdkforge.nfc.data/NativeNDEFMessageTag.readMessage|readMessage(kotlin.Function1<dev.sdkforge.nfc.domain.NDEFMessage?,kotlin.Unit>){}[0]
+    final fun toString(): kotlin/String // dev.sdkforge.nfc.data/NativeNDEFMessageTag.toString|toString(){}[0]
+}
+
+final class dev.sdkforge.nfc.data/NativeNDEFRecord : dev.sdkforge.nfc.domain/NDEFRecord { // dev.sdkforge.nfc.data/NativeNDEFRecord|null[0]
+    constructor <init>(platform.CoreNFC/NFCNDEFPayload) // dev.sdkforge.nfc.data/NativeNDEFRecord.<init>|<init>(platform.CoreNFC.NFCNDEFPayload){}[0]
+
+    final val identifier // dev.sdkforge.nfc.data/NativeNDEFRecord.identifier|{}identifier[0]
+        final fun <get-identifier>(): kotlin/ByteArray // dev.sdkforge.nfc.data/NativeNDEFRecord.identifier.<get-identifier>|<get-identifier>(){}[0]
+    final val payload // dev.sdkforge.nfc.data/NativeNDEFRecord.payload|{}payload[0]
+        final fun <get-payload>(): kotlin/ByteArray // dev.sdkforge.nfc.data/NativeNDEFRecord.payload.<get-payload>|<get-payload>(){}[0]
+    final val type // dev.sdkforge.nfc.data/NativeNDEFRecord.type|{}type[0]
+        final fun <get-type>(): kotlin/ByteArray // dev.sdkforge.nfc.data/NativeNDEFRecord.type.<get-type>|<get-type>(){}[0]
+    final val typeNameFormat // dev.sdkforge.nfc.data/NativeNDEFRecord.typeNameFormat|{}typeNameFormat[0]
+        final fun <get-typeNameFormat>(): dev.sdkforge.nfc.domain/TypeNameFormat // dev.sdkforge.nfc.data/NativeNDEFRecord.typeNameFormat.<get-typeNameFormat>|<get-typeNameFormat>(){}[0]
+}
+
+final class dev.sdkforge.nfc.data/NativeNFC : dev.sdkforge.nfc.domain/NFC { // dev.sdkforge.nfc.data/NativeNFC|null[0]
+    constructor <init>(platform.UIKit/UIViewController) // dev.sdkforge.nfc.data/NativeNFC.<init>|<init>(platform.UIKit.UIViewController){}[0]
+
+    final val isEnabled // dev.sdkforge.nfc.data/NativeNFC.isEnabled|{}isEnabled[0]
+        final fun <get-isEnabled>(): kotlin/Boolean // dev.sdkforge.nfc.data/NativeNFC.isEnabled.<get-isEnabled>|<get-isEnabled>(){}[0]
+
+    final fun startNDEFReading(kotlin/Function1<dev.sdkforge.nfc.domain/NDEFTag, kotlin/Unit>, kotlin/Function1<kotlin/Throwable, kotlin/Unit>): kotlin/Boolean // dev.sdkforge.nfc.data/NativeNFC.startNDEFReading|startNDEFReading(kotlin.Function1<dev.sdkforge.nfc.domain.NDEFTag,kotlin.Unit>;kotlin.Function1<kotlin.Throwable,kotlin.Unit>){}[0]
+    final fun startNFCTagReading(kotlin/Function1<dev.sdkforge.nfc.domain/NFCTag, kotlin/Unit>, kotlin/Function1<kotlin/Throwable, kotlin/Unit>): kotlin/Boolean // dev.sdkforge.nfc.data/NativeNFC.startNFCTagReading|startNFCTagReading(kotlin.Function1<dev.sdkforge.nfc.domain.NFCTag,kotlin.Unit>;kotlin.Function1<kotlin.Throwable,kotlin.Unit>){}[0]
+    final fun stopNDEFReading() // dev.sdkforge.nfc.data/NativeNFC.stopNDEFReading|stopNDEFReading(){}[0]
+    final fun stopNFCTagReading() // dev.sdkforge.nfc.data/NativeNFC.stopNFCTagReading|stopNFCTagReading(){}[0]
+}
+
+final class dev.sdkforge.nfc.data/NativeNfcNDEFTag : dev.sdkforge.nfc.data/NativeNDEFTag { // dev.sdkforge.nfc.data/NativeNfcNDEFTag|null[0]
+    constructor <init>(platform.CoreNFC/NFCNDEFTagProtocol) // dev.sdkforge.nfc.data/NativeNfcNDEFTag.<init>|<init>(platform.CoreNFC.NFCNDEFTagProtocol){}[0]
+
+    final fun copy(platform.CoreNFC/NFCNDEFTagProtocol = ...): dev.sdkforge.nfc.data/NativeNfcNDEFTag // dev.sdkforge.nfc.data/NativeNfcNDEFTag.copy|copy(platform.CoreNFC.NFCNDEFTagProtocol){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sdkforge.nfc.data/NativeNfcNDEFTag.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sdkforge.nfc.data/NativeNfcNDEFTag.hashCode|hashCode(){}[0]
+    final fun readMessage(kotlin/Function1<dev.sdkforge.nfc.domain/NDEFMessage?, kotlin/Unit>) // dev.sdkforge.nfc.data/NativeNfcNDEFTag.readMessage|readMessage(kotlin.Function1<dev.sdkforge.nfc.domain.NDEFMessage?,kotlin.Unit>){}[0]
+    final fun toString(): kotlin/String // dev.sdkforge.nfc.data/NativeNfcNDEFTag.toString|toString(){}[0]
+    final fun writeMessage(dev.sdkforge.nfc.domain/NDEFMessage) // dev.sdkforge.nfc.data/NativeNfcNDEFTag.writeMessage|writeMessage(dev.sdkforge.nfc.domain.NDEFMessage){}[0]
+}
+
+open class dev.sdkforge.nfc.data/NativeNDEFTag : dev.sdkforge.nfc.domain/NDEFTag { // dev.sdkforge.nfc.data/NativeNDEFTag|null[0]
+    constructor <init>() // dev.sdkforge.nfc.data/NativeNDEFTag.<init>|<init>(){}[0]
+
+    open val isWritable // dev.sdkforge.nfc.data/NativeNDEFTag.isWritable|{}isWritable[0]
+        open fun <get-isWritable>(): kotlin/Boolean // dev.sdkforge.nfc.data/NativeNDEFTag.isWritable.<get-isWritable>|<get-isWritable>(){}[0]
+
+    open fun readMessage(kotlin/Function1<dev.sdkforge.nfc.domain/NDEFMessage?, kotlin/Unit>) // dev.sdkforge.nfc.data/NativeNDEFTag.readMessage|readMessage(kotlin.Function1<dev.sdkforge.nfc.domain.NDEFMessage?,kotlin.Unit>){}[0]
+    open fun writeMessage(dev.sdkforge.nfc.domain/NDEFMessage) // dev.sdkforge.nfc.data/NativeNDEFTag.writeMessage|writeMessage(dev.sdkforge.nfc.domain.NDEFMessage){}[0]
+}
+
+open class dev.sdkforge.nfc.data/NativeNFCTag : dev.sdkforge.nfc.domain/NFCTag { // dev.sdkforge.nfc.data/NativeNFCTag|null[0]
+    constructor <init>(platform.CoreNFC/NFCTagProtocol) // dev.sdkforge.nfc.data/NativeNFCTag.<init>|<init>(platform.CoreNFC.NFCTagProtocol){}[0]
+}

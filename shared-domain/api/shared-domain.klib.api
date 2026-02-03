@@ -1,0 +1,82 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <dev.sdkforge.nfc:shared-domain>
+final enum class dev.sdkforge.nfc.domain/NFCMifareFamily : kotlin/Enum<dev.sdkforge.nfc.domain/NFCMifareFamily> { // dev.sdkforge.nfc.domain/NFCMifareFamily|null[0]
+    enum entry PLUS // dev.sdkforge.nfc.domain/NFCMifareFamily.PLUS|null[0]
+    enum entry ULTRALIGHT // dev.sdkforge.nfc.domain/NFCMifareFamily.ULTRALIGHT|null[0]
+    enum entry UNKNOWN // dev.sdkforge.nfc.domain/NFCMifareFamily.UNKNOWN|null[0]
+
+    final val entries // dev.sdkforge.nfc.domain/NFCMifareFamily.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sdkforge.nfc.domain/NFCMifareFamily> // dev.sdkforge.nfc.domain/NFCMifareFamily.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): dev.sdkforge.nfc.domain/NFCMifareFamily // dev.sdkforge.nfc.domain/NFCMifareFamily.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<dev.sdkforge.nfc.domain/NFCMifareFamily> // dev.sdkforge.nfc.domain/NFCMifareFamily.values|values#static(){}[0]
+}
+
+final enum class dev.sdkforge.nfc.domain/TypeNameFormat : kotlin/Enum<dev.sdkforge.nfc.domain/TypeNameFormat> { // dev.sdkforge.nfc.domain/TypeNameFormat|null[0]
+    enum entry ABSOLUTE_URI // dev.sdkforge.nfc.domain/TypeNameFormat.ABSOLUTE_URI|null[0]
+    enum entry EMPTY // dev.sdkforge.nfc.domain/TypeNameFormat.EMPTY|null[0]
+    enum entry MEDIA // dev.sdkforge.nfc.domain/TypeNameFormat.MEDIA|null[0]
+    enum entry NFC_EXTERNAL // dev.sdkforge.nfc.domain/TypeNameFormat.NFC_EXTERNAL|null[0]
+    enum entry NFC_WELL_KNOWN // dev.sdkforge.nfc.domain/TypeNameFormat.NFC_WELL_KNOWN|null[0]
+    enum entry UNCHANGED // dev.sdkforge.nfc.domain/TypeNameFormat.UNCHANGED|null[0]
+    enum entry UNKNOWN // dev.sdkforge.nfc.domain/TypeNameFormat.UNKNOWN|null[0]
+
+    final val entries // dev.sdkforge.nfc.domain/TypeNameFormat.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sdkforge.nfc.domain/TypeNameFormat> // dev.sdkforge.nfc.domain/TypeNameFormat.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): dev.sdkforge.nfc.domain/TypeNameFormat // dev.sdkforge.nfc.domain/TypeNameFormat.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<dev.sdkforge.nfc.domain/TypeNameFormat> // dev.sdkforge.nfc.domain/TypeNameFormat.values|values#static(){}[0]
+}
+
+abstract interface dev.sdkforge.nfc.domain/MifareNFCTag : dev.sdkforge.nfc.domain/NFCTag { // dev.sdkforge.nfc.domain/MifareNFCTag|null[0]
+    abstract val family // dev.sdkforge.nfc.domain/MifareNFCTag.family|{}family[0]
+        abstract fun <get-family>(): dev.sdkforge.nfc.domain/NFCMifareFamily // dev.sdkforge.nfc.domain/MifareNFCTag.family.<get-family>|<get-family>(){}[0]
+    abstract val identifier // dev.sdkforge.nfc.domain/MifareNFCTag.identifier|{}identifier[0]
+        abstract fun <get-identifier>(): kotlin/ByteArray // dev.sdkforge.nfc.domain/MifareNFCTag.identifier.<get-identifier>|<get-identifier>(){}[0]
+
+    abstract fun send(kotlin/ByteArray, kotlin/Function1<kotlin/ByteArray, kotlin/Unit>) // dev.sdkforge.nfc.domain/MifareNFCTag.send|send(kotlin.ByteArray;kotlin.Function1<kotlin.ByteArray,kotlin.Unit>){}[0]
+}
+
+abstract interface dev.sdkforge.nfc.domain/NDEFMessage { // dev.sdkforge.nfc.domain/NDEFMessage|null[0]
+    abstract val length // dev.sdkforge.nfc.domain/NDEFMessage.length|{}length[0]
+        abstract fun <get-length>(): kotlin/Long // dev.sdkforge.nfc.domain/NDEFMessage.length.<get-length>|<get-length>(){}[0]
+    abstract val records // dev.sdkforge.nfc.domain/NDEFMessage.records|{}records[0]
+        abstract fun <get-records>(): kotlin.collections/List<dev.sdkforge.nfc.domain/NDEFRecord> // dev.sdkforge.nfc.domain/NDEFMessage.records.<get-records>|<get-records>(){}[0]
+}
+
+abstract interface dev.sdkforge.nfc.domain/NDEFRecord { // dev.sdkforge.nfc.domain/NDEFRecord|null[0]
+    abstract val identifier // dev.sdkforge.nfc.domain/NDEFRecord.identifier|{}identifier[0]
+        abstract fun <get-identifier>(): kotlin/ByteArray // dev.sdkforge.nfc.domain/NDEFRecord.identifier.<get-identifier>|<get-identifier>(){}[0]
+    abstract val payload // dev.sdkforge.nfc.domain/NDEFRecord.payload|{}payload[0]
+        abstract fun <get-payload>(): kotlin/ByteArray // dev.sdkforge.nfc.domain/NDEFRecord.payload.<get-payload>|<get-payload>(){}[0]
+    abstract val type // dev.sdkforge.nfc.domain/NDEFRecord.type|{}type[0]
+        abstract fun <get-type>(): kotlin/ByteArray // dev.sdkforge.nfc.domain/NDEFRecord.type.<get-type>|<get-type>(){}[0]
+    abstract val typeNameFormat // dev.sdkforge.nfc.domain/NDEFRecord.typeNameFormat|{}typeNameFormat[0]
+        abstract fun <get-typeNameFormat>(): dev.sdkforge.nfc.domain/TypeNameFormat // dev.sdkforge.nfc.domain/NDEFRecord.typeNameFormat.<get-typeNameFormat>|<get-typeNameFormat>(){}[0]
+}
+
+abstract interface dev.sdkforge.nfc.domain/NDEFTag { // dev.sdkforge.nfc.domain/NDEFTag|null[0]
+    abstract val isWritable // dev.sdkforge.nfc.domain/NDEFTag.isWritable|{}isWritable[0]
+        abstract fun <get-isWritable>(): kotlin/Boolean // dev.sdkforge.nfc.domain/NDEFTag.isWritable.<get-isWritable>|<get-isWritable>(){}[0]
+
+    abstract fun readMessage(kotlin/Function1<dev.sdkforge.nfc.domain/NDEFMessage?, kotlin/Unit>) // dev.sdkforge.nfc.domain/NDEFTag.readMessage|readMessage(kotlin.Function1<dev.sdkforge.nfc.domain.NDEFMessage?,kotlin.Unit>){}[0]
+    abstract fun writeMessage(dev.sdkforge.nfc.domain/NDEFMessage) // dev.sdkforge.nfc.domain/NDEFTag.writeMessage|writeMessage(dev.sdkforge.nfc.domain.NDEFMessage){}[0]
+}
+
+abstract interface dev.sdkforge.nfc.domain/NFC { // dev.sdkforge.nfc.domain/NFC|null[0]
+    abstract val isEnabled // dev.sdkforge.nfc.domain/NFC.isEnabled|{}isEnabled[0]
+        abstract fun <get-isEnabled>(): kotlin/Boolean // dev.sdkforge.nfc.domain/NFC.isEnabled.<get-isEnabled>|<get-isEnabled>(){}[0]
+
+    abstract fun startNDEFReading(kotlin/Function1<dev.sdkforge.nfc.domain/NDEFTag, kotlin/Unit>, kotlin/Function1<kotlin/Throwable, kotlin/Unit> = ...): kotlin/Boolean // dev.sdkforge.nfc.domain/NFC.startNDEFReading|startNDEFReading(kotlin.Function1<dev.sdkforge.nfc.domain.NDEFTag,kotlin.Unit>;kotlin.Function1<kotlin.Throwable,kotlin.Unit>){}[0]
+    abstract fun startNFCTagReading(kotlin/Function1<dev.sdkforge.nfc.domain/NFCTag, kotlin/Unit>, kotlin/Function1<kotlin/Throwable, kotlin/Unit> = ...): kotlin/Boolean // dev.sdkforge.nfc.domain/NFC.startNFCTagReading|startNFCTagReading(kotlin.Function1<dev.sdkforge.nfc.domain.NFCTag,kotlin.Unit>;kotlin.Function1<kotlin.Throwable,kotlin.Unit>){}[0]
+    abstract fun stopNDEFReading() // dev.sdkforge.nfc.domain/NFC.stopNDEFReading|stopNDEFReading(){}[0]
+    abstract fun stopNFCTagReading() // dev.sdkforge.nfc.domain/NFC.stopNFCTagReading|stopNFCTagReading(){}[0]
+}
+
+abstract interface dev.sdkforge.nfc.domain/NFCTag // dev.sdkforge.nfc.domain/NFCTag|null[0]
